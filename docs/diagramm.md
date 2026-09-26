@@ -1,7 +1,7 @@
 # Feature: CANCELLATION OF BOOKING
 ## Use Case: Cancellation of a booking more than 24 hours before the start time
 
-The main participants in this process are the user, the Travelmate system, the email service, the hotel, and the bank. The diagram illustrates the process of cancelling a reservation more than 24 hours before the scheduled start time.
+### The main participants in this process are the user, the Travelmate system, the email service, the hotel, and the bank. The diagram illustrates the process of cancelling a reservation more than 24 hours before the scheduled start time.
 
 ```mermaid
 sequenceDiagram
@@ -28,4 +28,5 @@ sequenceDiagram
         System->>Hotel: 6. Sends cancellation details to the hotel
         System->>Bank: 7. Sends refund request to the bank
     end
+    
     ```
