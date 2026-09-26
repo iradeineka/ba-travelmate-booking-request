@@ -12,21 +12,20 @@ sequenceDiagram
     participant Hotel as Hotel API
     participant Bank as Payment Gateway / Bank
 
-    User->>System: 1. Clicks "Cancel booking" button
-    System-->>User: 2. Asks to confirm the cancellation
+    User->>System: Clicks "Cancel booking" button
+    System-->>User: Asks to confirm the cancellation
 
-    User->>System: 3. Confirms the cancellation
+    User->>System: Confirms the cancellation
     
     rect rgb(240, 248, 255)
         note over System: Internal System Processing
-        System->>System: 4. Changes order status to "Cancelled"
-        System->>System: 8. Makes hotel dates available for other users
+        System->>System: Changes order status to "Cancelled"
+        System->>System: Makes hotel dates available for other users
     end
 
     par External Notifications & Integrations
-        System->>Email: 5. Sends email with cancellation confirmation & refund info
-        System->>Hotel: 6. Sends cancellation details to the hotel
-        System->>Bank: 7. Sends refund request to the bank
+        System->>Email: Sends email with cancellation confirmation & refund info
+        System->>Hotel: Sends cancellation details to the hotel
+        System->>Bank: Sends refund request to the bank
     end
-    
-    ```
+```
